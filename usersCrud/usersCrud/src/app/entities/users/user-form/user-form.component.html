@@ -1,0 +1,55 @@
+<div style="width: 25%; margin: 0 auto;" class="tarjeta">
+            <form *ngIf="user" #userForm="ngForm" name="userForm" role="form" novalidate autocomplete="off">
+
+            
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" [(ngModel)]="user.name" name="name" class="form-control campo" id="name" #price="ngModel" required minlength="3" maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Apellidos</label>
+                    <input type="text" [(ngModel)]="user.surname" name="surname" class="form-control campo" id="surname" #price="ngModel" required minlength="3" maxlength="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" [(ngModel)]="user.email" name="email" class="form-control campo" id="email" #price="ngModel" required required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+                    <div *ngIf="userForm.controls['email'].errors?.['pattern'] && userForm.controls['email'].touched" class="text-danger">
+                        El correo electrónico no cumple con el formato válido.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" class="form-control campo" [(ngModel)]="user.role" required>
+                        <option value="" disabled selected>Selecciona un rol</option>
+                        <option value="Admin">Administrador</option>
+                        <option value="Contributor">Contributor</option>
+                    </select>
+                </div>
+
+                <div class="buttonsForm">
+                    <button (click)="saveUser()" [disabled]="userForm.invalid" class="botonguardar">Guardar</button>
+                    <button data-bs-dismiss="modal" class="botoncancelar" data-bs-toggle="modal" data-bs-target="#askConfirmationDelete">Cancelar</button>
+                </div>
+
+                <div class="modal fade" id="askConfirmationDelete" tabindex="-1" aria-labelledby="askConfirmationDelete" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Seguro que quieres salir?</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Los datos no guardados se perderán
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="volver();">Sí</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </form>
+        </div>

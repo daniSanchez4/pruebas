@@ -1,0 +1,130 @@
+$color-fondo-header-table: #101010;
+$color-fondo-table: #212121;
+$color-fondo-card: #171717;
+
+table{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+label{
+    margin-bottom: 10px;
+}
+
+
+.container-table {
+    max-width: 800px;
+    margin: 0 auto; 
+    text-align: center;
+    margin-top: 30px; 
+    
+}
+
+.botoneraPaginacion {
+    margin-top: 40px; 
+}
+
+.span-botones{
+    margin: 0 30px; 
+}
+
+.titulo {
+    text-align: center;
+    
+    padding-bottom: 20px ;
+    margin: 30px;
+    background-image: linear-gradient(to right, #b993d6, #8ca6db); 
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    font-size: 4rem;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); 
+    border-radius: 1rem;
+    background-color: $color-fondo-card;
+    color: #fff; 
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center; 
+}
+
+.button-container {
+    display: flex;
+    gap: 50px; 
+    justify-content: center; 
+    margin-top: 10px;
+}
+
+.flex-grow {
+    width: 130px; 
+}
+
+.buscar {
+  
+    background-color: $color-fondo-header-table;
+    
+    border: none; 
+    
+}
+
+.nuevo {
+    background-image: linear-gradient(to right, #b993d6, #8ca6db); 
+    color: #fff; 
+    border: none; 
+}
+
+.paginas{
+    background-color: #69648b;
+    border: none;
+}
+
+
+
+.table td {
+    background-color: $color-fondo-table;
+    border-color: $color-fondo-table; 
+}
+
+table tr td {
+    color: whitesmoke; 
+}
+
+table th {
+    background-color: $color-fondo-header-table;
+    color: whitesmoke;
+    border-color: $color-fondo-header-table;
+}
+
+.filtros{
+    background-color: $color-fondo-table;
+    border: none;
+    color: whitesmoke;
+}
+
+.borrar{
+    background-color: #9f9ed9;
+    border: none;
+}
+
+.editar{
+    background-color: $color-fondo-header-table;
+    border: none;
+}
+
+
