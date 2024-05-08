@@ -1,0 +1,24 @@
+
+  <div class="login-container">
+    <img src="assets/kreitekfy.png" alt="logo">
+    <div class="card">
+      <h1>Inicio de sesión</h1>
+      <form>
+      <div class="form-group">
+        <label for="username" class="label-username">Nombre de usuario 👤</label>
+        <input type="text" class="form-control username" [(ngModel)]="credentials.username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password" class="label-password">Contraseña 🔒</label>
+        <input type="password" class="form-control password" [(ngModel)]="credentials.password" name="password" required>
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+      <button (click)="login()" class="btn btn-primary boton-login">Login</button>
+    </form>
+    <div class="register-link">
+      <p>¿No tienes una cuenta? <a routerLink="/register">Regístrate</a></p>
+    </div>
+  </div>
+  </div>

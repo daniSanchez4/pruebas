@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+    <h1>Catálogo</h1>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="style" class="text-center d-block label-filtro">Estilo</label>
+                        <input type="text" [(ngModel)]="styleFilter" name="style" class="form-control filtros">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="artist" class="text-center d-block label-filtro">Artista</label>
+                        <input type="text" [(ngModel)]="artistFilter" name="artist" class="form-control filtros">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="title" class="text-center d-block label-filtro">Título</label>
+                        <input type="text" [(ngModel)]="titleFilter" name="title" class="form-control filtros">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="album" class="text-center d-block label-filtro">Álbum</label>
+                        <input type="text" [(ngModel)]="albumFilter" name="album" class="form-control filtros">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="button-container d-flex justify-content-center align-items-center">
+        <button id="btnFilter" class="btn btn-secondary flex-grow buscar" (click)="searchByFilters()">Buscar</button>
+        <button class="btn btn-secondary limpiar" (click)="limpiarCampos()">Limpiar campos</button>
+    </div>
+
+
+<div class="song-card-container">
+    <div class="song-card" *ngFor="let song of songsByIdDesc">
+      <a [routerLink]="['/song', song.id]">
+      <img class="song-image" [src]="'data:image/webp;base64,' + song.image" alt="Imagen de la canción">
+    </a>
+      <div class="song-details">
+        <h2 class="song-name">{{ song.name }}</h2>
+        <p class="song-artist">{{ song.artist }}</p>
+        <p class="song-style">{{ song.style }}</p>
+    </div>
+    </div>
+  </div>
+
+  <div class="botoneraPaginacion d-flex justify-content-center">
+    <button [disabled]="first" class="btn btn-secondary btnAtras paginas"
+        (click)="previousPage()">Anterior</button>
+    <span style="margin: 0 20px;">Página {{(page+1)}} de {{totalPages}} - Usuarios totales:
+        {{totalElements}}</span>
+    <button [disabled]="last" class="btn btn-secondary btnSiguiente paginas"
+        (click)="nextPage()">Siguiente</button>
+</div>
+

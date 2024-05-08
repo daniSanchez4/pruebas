@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="contenido">
+<div *ngIf="user" class="card text-center">
+    <div class="card-body text-center">
+      <h2 class="title">Mi Perfil</h2>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="user.username" disabled>
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="user.firstName">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="user.lastName">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" [(ngModel)]="user.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password">
+      </div>
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <input type="text" id="role" [(ngModel)]="user.role">
+      </div>
+      <button (click)="updateUser()">Actualizar datos</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+.song-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 50px;
+  }
+  
+  .song-card {
+    background-color: #282828;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+  }
+  
+.song-image{
+  width: 150px;
+  height: 150px;
+  margin-left: 5px;
+  border-radius: 10px;
+  
+}
+  
+  .song-details {
+    margin-top: 15px;
+  }
+  
+  .song-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: whitesmoke;
+  }
+  
+  .song-artist {
+    font-size: 16px;
+    color: #a2a2a2;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  
+  .song-style {
+    font-size: 16px;
+    color: #6F00FF;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
+  .song-duration,
+  .song-reproductions,
+  .song-puntuation {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 3px;
+  }
+
+ h1{
+    text-align: center;
+    margin-top: 50px;
+    color: whitesmoke;
+ }
+
+ .novedades{
+  text-align: center;
+    padding-top: 40px;
+    color: whitesmoke;
+ }
+
+ .song-card-container-popular{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+ }
+
+ .filtro-estilo{
+  max-width: 230px;
+ }
+
+ .label-filtro{
+  color: white;
+  padding-bottom: 10px;
+  margin-top: 30px;
+ }
+
+ .buscar{
+  margin-right: 20px;
+  background-color: #6F00FF;
+  border: none;
+ }
+
+ .limpiar{
+  background-color: black;
+  border: none;
+ }
+
+ .filtros{
+  background-color: #282828;
+  border: none;
+  color: white;
+ }
+
+ .all-songs{
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+ padding-top: 40px;
+ }
+
+ .container{
+  padding-bottom: 60px;
+ }
+

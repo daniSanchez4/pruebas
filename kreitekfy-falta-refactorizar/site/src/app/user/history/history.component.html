@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="contenido">
+
+<h1 class="title">Historial</h1>
+
+    <div class="center margin-top table-container">
+<table class="large-table">
+   
+    <thead>
+      <tr>
+        <th>ID de Canción</th>
+        <th>Estilo de Canción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let repro of reprosPaged">
+        <td>{{ repro.songId }}</td>
+        <td>{{ repro.songStyle }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="botoneraPaginacion d-flex justify-content-center">
+    <button [disabled]="first" class="btn btn-secondary btnAtras paginas"
+        (click)="previousPage()">Anterior</button>
+    <span style="margin: 0 20px;">Página {{(page+1)}} de {{totalPages}} - Reproducciones totales:
+        {{totalElements}}</span>
+    <button [disabled]="last" class="btn btn-secondary btnSiguiente paginas"
+        (click)="nextPage()">Siguiente</button>
+</div>
+</div>

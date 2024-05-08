@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="contenido">
+<div *ngIf="song" class="song-form">
+  <div class="content">
+    <img class="song-image" [src]="'data:image/webp;base64,' + song.image" alt="Imagen de la canción">
+    <div class="song-details">
+      <h1 class="nombre">{{ song.name }}</h1>
+      
+      <p class="album" id="albumId">Álbum: {{ song.album }}</p>
+
+      <p class="artista">{{ song.artist }}</p>
+
+        <span (click)="setPuntuation(1)" [class.selected]="song.puntuation >= 1" class="star">&#9733;</span>
+        <span (click)="setPuntuation(2)" [class.selected]="song.puntuation >= 2" class="star">&#9733;</span>
+        <span (click)="setPuntuation(3)" [class.selected]="song.puntuation >= 3" class="star">&#9733;</span>
+        <span (click)="setPuntuation(4)" [class.selected]="song.puntuation >= 4" class="star">&#9733;</span>
+      <br><br>
+
+      <p class="estilo">Género: {{ song.style }}</p>
+      
+      <p class="reproducciones">Reproducciones: {{ song.reproductions }}</p>
+
+      <p class="duracion">Duración: {{ (song.duration / 60) | number: '1.1-1' }} minutos</p>
+      
+      <button (click)="reproducirCancion()" (click)="playSong()" class="play-button">
+        <i class="fas fa-play"></i>
+      </button>
+    </div>
+  </div>
+</div>
+</div>

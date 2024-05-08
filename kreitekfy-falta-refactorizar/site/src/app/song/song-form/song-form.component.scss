@@ -1,0 +1,71 @@
+.song-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.song-image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.song-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.nombre {
+  font-size: 24px;
+}
+
+.album,
+.artista,
+.estilo,
+.reproducciones,
+p {
+  font-size: 18px;
+  color: white;
+}
+h1{
+  color: white;
+}
+
+#albumId{
+color: #b2b2b2;
+}
+
+.play-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.star {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.selected {
+  color: #6f00ff; 
+}
+
+i{
+  color: white;
+}
+
+button{
+  background-color: #6f00ff;
+  border-radius: 12px;
+}
+
+.contenido{
+  height: 93vh;
+}
